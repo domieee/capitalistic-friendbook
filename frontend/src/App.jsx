@@ -4,8 +4,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Interface from './pages/Interface'
 import Profile from './pages/Profile'
 import Editor from './pages/Editor'
-import './App.css'
 
+import Navigation from './components/Navigation/Navigation'
+
+import './App.css'
 
 function App() {
 
@@ -23,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Navigation />
         <Routes>
           <Route path='/' element={<Interface />}></Route>
           <Route path='/profile/:id' element={<Profile />}></Route>
