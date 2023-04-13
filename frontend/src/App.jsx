@@ -26,11 +26,13 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navigation />
-        <Routes>
-          <Route path='/' element={<Interface />}></Route>
-          <Route path='/profile/:id' element={<Profile />}></Route>
-          <Route path='/editor' element={<Editor />}></Route>
-        </Routes>
+        <main>
+          <Routes>
+            <Route path='/' element={<Interface friends={friends} />}></Route>
+            <Route path='/profile/:id' element={<Profile />}></Route>
+            <Route path='/editor' element={<Editor />}></Route>
+          </Routes>
+        </main>
       </BrowserRouter>
     </div>
   )
