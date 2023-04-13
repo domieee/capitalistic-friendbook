@@ -1,5 +1,11 @@
 import { useEffect, useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import Interface from './pages/Interface'
+import Profile from './pages/Profile'
+import Editor from './pages/Editor'
 import './App.css'
+
 
 function App() {
 
@@ -16,7 +22,13 @@ function App() {
 
   return (
     <div className="App">
-
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Interface />}></Route>
+          <Route path='/profile/:id' element={<Profile />}></Route>
+          <Route path='/editor' element={<Editor />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
