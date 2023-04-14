@@ -1,0 +1,12 @@
+.aside {
+    top: 0;
+    position: sticky;
+    width: 200px;
+    height: 100vh;
+    grid-area: A;
+
+    >section {
+        display: flex;
+        flex-direction: column;
+    }
+}

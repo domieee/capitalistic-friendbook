@@ -1,4 +1,5 @@
 import InterfaceList from '../components/Interface/InterfaceList.jsx'
+import './interface.scss'
 
 const Interface = ({ friends }) => {
     return (

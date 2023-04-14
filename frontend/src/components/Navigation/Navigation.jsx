@@ -1,15 +1,13 @@
-import { Link } from 'react-router-dom'
+import './Navigation.scss'
 
-const Navigation = () => {
+const Navigation = ({ page, setPage }) => {
+
+
     return (
         <nav className="navigation">
-            <p>Capitalistic Friendbook</p>
-            <section>
-                <Link to='/' >Dashboard</Link>
-                <Link to='/editor' >Editor</Link>
-            </section>
+            {page}
         </nav>
-    )
+    );
 }
 
 export default Navigation;

@@ -1,0 +1,9 @@
+@use '../../assets/scss/variables' as var;
+
+.navigation {
+    background-color: #242424;
+    top: 0;
+    height: 50px;
+    position: sticky;
+    grid-area: B;
+}

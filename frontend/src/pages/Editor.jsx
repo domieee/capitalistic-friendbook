@@ -1,6 +1,13 @@
-const Editor = () => {
+import Form from "../components/editor/Form";
+
+import './Editor.scss'
+
+const Editor = ({ friends, setFriends }) => {
     return (
-        <h1>Editor</h1>
+        <section className="editor">
+            <h1>Editor</h1>
+            <Form friends={friends} setFriends={setFriends} />
+        </section>
     );
 }
 
