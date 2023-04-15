@@ -6,7 +6,6 @@ const InterfaceList = ({ friends }) => {
 
     return (
         <>
-            <h2>Interface List</h2>
             <article className="interfaceList">
                 {
                     friends.map((friend, index) => {

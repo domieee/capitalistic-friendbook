@@ -14,9 +14,14 @@ const InterfaceItem = ({ friend, index }) => {
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
                 className={'interfaceItem'}>
-                <img src={friend.profile.avatar} alt="" />
-                <p>{`${friend.profile.firstName} ${friend.profile.lastName}`}</p>
-                <p>{friend.profile.dob}</p>
+                <div>
+                    <img src={friend.profile.avatar} alt="" />
+                    <div>
+                        <p>{`${friend.profile.firstName} ${friend.profile.lastName}`}</p>
+                        <p>{friend.profile.jobTitle} @ </p>
+                        <p>{friend.profile.company}</p>
+                    </div>
+                </div>
                 <p>{friend.gender}</p>
             </article >
         </Link >

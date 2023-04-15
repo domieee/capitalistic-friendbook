@@ -4,6 +4,12 @@ import { ObjectId } from "mongodb"
 
 const COL = 'friends'
 
+import { Configuration, OpenAIApi } from "openai";
+const configuration = new Configuration({
+    apiKey: process.env.OPENAI_API_KEY,
+});
+const openai = new OpenAIApi(configuration);
+
 export const getData = async (req, res) => {
     try {
         const db = await getDB()
@@ -42,4 +48,23 @@ export const getFilterData = async (req, res) => {
         console.log(err)
         res.end()
     }
+}
+
+export const writePrompt = async (req, res) => {
+    const response = await openai.createCompletion({
+        model: "gpt-3.5-turbo",
+        usage: { 'prompt_tokens': 56, 'completion_tokens': 31, 'total_tokens': 87 },
+        choices: [
+            {
+                'message': {
+                    'role': 'assistant',
+                    'content': 'The 2020 World Series was played in Arlington, Texas at the Globe Life Field, which was the new home stadium for the Texas Rangers.'
+                },
+                'finish_reason': 'stop',
+                'index': 0
+            }
+        ]
+    });
+    request.send(req)
+    console.log(response.json())
 }

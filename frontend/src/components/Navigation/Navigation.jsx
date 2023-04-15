@@ -5,7 +5,9 @@ const Navigation = ({ page, setPage }) => {
 
     return (
         <nav className="navigation">
-            {page}
+            <div className='headingContainer'>
+                <h1>{page}</h1>
+            </div>
         </nav>
     );
 }

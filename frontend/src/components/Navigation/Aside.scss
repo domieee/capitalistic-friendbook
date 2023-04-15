@@ -1,9 +1,12 @@
+@use '../../assets/scss/variables' as var;
+
 .aside {
     top: 0;
     position: sticky;
     width: 200px;
     height: 100vh;
     grid-area: A;
+    border-right: var.$Colorist-UI-Theme-4-hex 1px solid;
 
     >section {
         display: flex;

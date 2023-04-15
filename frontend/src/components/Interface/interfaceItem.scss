@@ -1,15 +1,27 @@
 @use '../../assets/scss/variables' as var;
 
 .interfaceItem {
-    >img {
-        width: 64px;
-        height: auto;
+    div {
+        display: flex;
+
+        >img {
+            background-color: var.$Colorist-UI-Theme-2-hex;
+            border-radius: 100%;
+            width: 64px;
+            height: 64px;
+        }
+
+        >div {
+            flex-direction: column;
+        }
     }
+
 
     transition: max-width 0.5s ease-in-out;
     transition: max-height 0.5s ease-in-out;
     max-width: 320px;
     width: 100%;
+    min-height: 200px;
     max-height: 390px;
     height: 100%;
     background-color: var.$Colorist-UI-Theme-3-hex;

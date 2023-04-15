@@ -40,8 +40,6 @@ const Form = ({ friends, setFriends }) => {
 
     return (
         <>
-            <h3>Form</h3>
-
             <label htmlFor="firstName">First Name</label>
             <input
                 ref={firstNameRef}
